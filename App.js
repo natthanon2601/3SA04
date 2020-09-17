@@ -6,12 +6,10 @@ export default function App() {
  console.log("Hello from console")
  }
  return (
- <View style={styles.container}>
- <Text onPress={doIt}>Hello world</Text>
- <View style={{width :50 , height:50, backgroundColor: '#00f'}}></View>
- <View style={{width :50 , height:50, backgroundColor: '#0f0'}}></View>
- <StatusBar style="auto" hidden ={false}/>
- </View>
+  <View style={styles.container}>
+  <Weather zipCode="90110" />
+  <StatusBar style="auto" />
+  </View>
  );
 }
 const styles = StyleSheet.create({
