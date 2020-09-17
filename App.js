@@ -1,22 +1,23 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-export default function App() {
- const doIt = () => {
- console.log("Hello from console")
- }
- return (
-  <View style={styles.container}>
-  <Weather zipCode="90110" />
-  <StatusBar style="auto" />
-  </View>
- );
-}
+//import liraries
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import Weather from './components/Weather'
+
+// create a component
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Weather zipCode="82000"/> 
+    </View>
+  );
+};
+
+// define your styles
 const styles = StyleSheet.create({
- container: {
- flex: 1,
- backgroundColor: '#fff',
- alignItems: 'center',
- justifyContent: 'center',
- },
+  container: {
+    flex: 1, 
+  },
 });
+
+//make this component available to the app
+export default App;
