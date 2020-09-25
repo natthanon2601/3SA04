@@ -34,5 +34,4 @@ export default function ZipCodeScreen() {
             <StatusBar style="auto" />
         </View>
     );
-
 }
