@@ -6,7 +6,7 @@ export default function Forecast(props) {
         <View style={styles.center}>
             <Text style={styles.big}>{props.main}</Text>
             <Text style={styles.medium}>{props.description}</Text>
-            <View style={{marginTop: 20}}>
+            <View>
                 <Text>
                     <Text style={styles.big}>{props.temp}  </Text>
                     <Text style={styles.medium}>°C</Text>
@@ -17,18 +17,20 @@ export default function Forecast(props) {
 }
 
 const styles = StyleSheet.create({
-    center: {        
-        justifyContent: 'space-around',
+    center: {     
+        justifyContent: 'space-around',   
         alignItems: 'center',
     },
     big: {
-        marginTop: 20,
+        margin : 10,
         fontSize: 30,
+        fontWeight: 'bold',
         color: 'white',
     },
     medium: {
-        marginTop: 20,
+        margin : 10,
         fontSize: 15,
+        fontWeight: 'bold',
         color: 'white',
     }
 })

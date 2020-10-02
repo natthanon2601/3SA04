@@ -1,32 +1,19 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Weather from './components/Weather'
-import WeatherScreen from './components/WeatherScreen'
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import ZipCodeScreen from './components/ZipCodeScreen';
-import Welcome from './components/Welcome'
+import React from 'react';
+import { Router, Scene } from 'react-native-router-flux';
+import Home from './components/Home';
+import Logo from './components/Logo';
 
-const Stack = createStackNavigator();
 
-// create a component
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="HOME" component={ZipCodeScreen} />
-        <Stack.Screen name="Welcome" component={WeatherScreen} />
-      </Stack.Navigator> 
-    </NavigationContainer>
+export default function App() {
+  return (        
+      <Router>
+        <Scene key="root">
+          <Scene key="Logo" component={Logo} hideNavBar={true}></Scene>
+          <Scene key="Home" component={Home} hideNavBar={true}></Scene>
+        </Scene>
+      </Router>
+     
+         
   );
-};
+}
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-  },
-});
-
-//make this component available to the app
-export default App;
